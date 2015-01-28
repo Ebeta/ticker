@@ -1,11 +1,11 @@
 require 'sinatra'
 
-get '/' do 
+# get '/' do 
 
-end
-
-# get '/sinatra' do 
-# 	"Hello Sinatra!"
 # end
+
+get 'ticker/ticker.rb' do 
+	
+end
 
 

@@ -1,0 +1,22 @@
+<html>
+
+<head>
+</head>
+<body>
+	<p> this is a special puppy </p>
+	<img src= https://cuteoverload.files.wordpress.com/dogs_sweaters_1-3852-1-_tplq.jpg?w=450&h=337 />
+	<p> 
+require 'nokogiri'
+require 'httparty'
+require 'json'
+require 'better_errors'
+response = HTTParty.get('http://finance.yahoo.com/q?s=AAPL')
+dom = Nokogiri::HTML(response.body)
+span = dom.xpath("//span[@id='yfs_l84_aapl' ]").first
+price = span.content
+puts "the current price of APPL is $#{price}"
+</p>
+
+</body>
+
+</html>

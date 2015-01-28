@@ -2,7 +2,7 @@
 require 'nokogiri'
 require 'httparty'
 require 'json'
-require 'better_errors'
+
 response = HTTParty.get('http://finance.yahoo.com/q?s=AAPL')
 dom = Nokogiri::HTML(response.body)
 span = dom.xpath("//span[@id='yfs_l84_aapl' ]").first
